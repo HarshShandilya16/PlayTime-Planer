@@ -1,0 +1,25 @@
+{
+"manifest_version": 3,
+"name": "YouTube Playlist Duration and Timetable Calc",
+"version": "1.0",
+"permissions": ["scripting", "activeTab", "tabs"],
+"host_permissions": ["*://www.youtube.com/*"],
+"action": {
+"default_popup": "popup.html",
+ "default_icon": "icon3.png"
+},
+"background": {
+"service_worker": "background.js"
+},
+"content_scripts": [
+{
+"matches": ["*://www.youtube.com/*"],
+"js": ["content.js"]
+}
+], 
+"icons": {
+"1": "icon1.png",
+"2": "icon2.png",
+"3": "icon3.png"
+}
+}
